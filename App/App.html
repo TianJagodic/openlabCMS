@@ -28,15 +28,14 @@
 
 <div id="page" class="wrapper d-flex align-items-stretch" style="width: 98%">
     <nav id="sidebar" class="active">
-        <img>
+        <img class="logo" src="../img/OpenLab.png">
         <ul class="list-unstyled components mb-5">
             <li class="section">CMS SECTIONS</li>
-            <li class="selection">Youtube streams</li>
-            <li class="selection">Stock photos</li>
-            <li class="selection">Github repos</li>
-            <li class="selection">Code snippets</li>
+            <li id="yts" class="selection">Youtube streams</li>
+            <li id="sph" class="selection">Stock photos</li>
+            <li id="ghr" class="selection">Github repos</li>
+            <li id="cs" class="selection">Code snippets</li>
         </ul>
-
     </nav>
     <div div id="mainContaier" class="d-flex flex-column" style="margin-left: 220px; width: 100%">
         <div id="content">
@@ -45,12 +44,45 @@
     </div>
 </div>
 
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyDyrpR3t2p8QGnXw-VV0K3MyyHNG9lI1P4",
+        authDomain: "openlabwebpage.firebaseapp.com",
+        databaseURL: "https://openlabwebpage.firebaseio.com",
+        projectId: "openlabwebpage",
+        storageBucket: "openlabwebpage.appspot.com",
+        messagingSenderId: "678773091364",
+        appId: "1:678773091364:web:14a68e3e420b448ee73cb1",
+        measurementId: "G-WDXJM3ECCM"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    const db = firebase.firestore();
+</script>
+
 
 <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
 </script>
+
 <script src="https://www.google-analytics.com/analytics.js" async></script>
+
+<!-- HERE BE THE SCRIPTS -->
+<script src="../Components/CodeSnippets.js"></script>
+<script src="../Components/StockPhotos.js"></script>
+<script src="../Components/YoutubeStreams.js"></script>
+<script src="../Components/GithubPages.js"></script>
+<script src="../Components/buttonInterface.js"></script>
 
 </body>
 </html>
