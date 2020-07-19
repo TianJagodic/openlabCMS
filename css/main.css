@@ -309,6 +309,12 @@ nav{
   margin-bottom: 3%;
   text-align: left;
   cursor: pointer;
+  color: #717171;;
+  transition: margin-left 500ms;
+}
+.selection:hover{
+  margin-left: 15%;
+  color: #323232;;
 }
 
 .logo{
@@ -347,4 +353,57 @@ nav{
   background-color: white;
   cursor: pointer;
 }
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border-radius: 20px;
+  width: 40%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.ASPMclose {
+  color: #3c3c3c;
+  float: left;
+  font-size: 0.9em;
+  font-weight: bold;
+  cursor: pointer;
+
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.addContentButton{
+  height: 30px;
+  cursor: pointer;
+  width: 95%;
+  padding: 10px;
+  margin: 20px;
+  text-align: center;
+  font-size: 1.3em;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+
 

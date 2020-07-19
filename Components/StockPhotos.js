@@ -2,7 +2,15 @@ async function LoadPhotos() {
     let docs = await GetAllStockPhotos();
     let divs = await AssembleDivs(docs);
     ClearPage();
+    Content.appendChild(addStockPhotoButton);
     divs.forEach(div => {Content.appendChild(div)})
+}
+
+const addStockPhotoButton = document.createElement('div');
+addStockPhotoButton.className = "addContentButton MD_shadow";
+addStockPhotoButton.innerText = "ADD NEW STOCK PHOTO";
+addStockPhotoButton.onclick = () => {
+    addStockPhotoModal.style.display = "block";
 }
 
 

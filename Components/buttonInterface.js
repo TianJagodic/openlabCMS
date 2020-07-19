@@ -28,3 +28,21 @@ codeSnippetsButton.onclick = function () {
     //Load code snippets
 
 };
+
+//MODALS -->
+//MODALS -->
+//MODALS -->
+
+
+let addStockPhotoModal = document.getElementById('addStockPhotoModal');
+let ASPMclose = document.getElementsByClassName("ASPMclose")[0];
+// When the user clicks on <span> (x), close the modal
+ASPMclose.onclick = function() {
+    addStockPhotoModal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == addStockPhotoModal) {
+        addStockPhotoModal.style.display = "none";
+    }
+}
