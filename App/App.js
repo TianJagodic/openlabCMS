@@ -1,6 +1,10 @@
+let Content = document.getElementById('content');
+
+
+
 
 function ClearPage() {
-    var allElements = document.getElementById("content");
+    let allElements = document.getElementById("content");
     while (allElements.hasChildNodes()) {
         allElements.removeChild(allElements.firstChild);
     }
@@ -9,7 +13,7 @@ function ClearPage() {
 
 //Destroy all children
 function DestroyAllChildren(id) {
-    var allElements = document.getElementById(id);
+    let allElements = document.getElementById(id);
     while (allElements.hasChildNodes()) {
         allElements.removeChild(allElements.firstChild);
     }

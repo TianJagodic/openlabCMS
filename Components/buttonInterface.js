@@ -19,6 +19,7 @@ githubReposButton.onclick = function () {
 
 stockPhotosButton.onclick = function () {
     ClearPage();
+    LoadPhotos();
     //Load stockImages
 };
 

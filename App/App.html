@@ -37,7 +37,7 @@
             <li id="cs" class="selection">Code snippets</li>
         </ul>
     </nav>
-    <div div id="mainContaier" class="d-flex flex-column" style="margin-left: 220px; width: 100%">
+    <div div id="mainContaier" class="d-flex flex-column" style="margin-left: 220px">
         <div id="content">
 
         </div>
@@ -50,6 +50,9 @@
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-storage.js"></script>
 
 <script>
     // Your web app's Firebase configuration
@@ -78,11 +81,13 @@
 <script src="https://www.google-analytics.com/analytics.js" async></script>
 
 <!-- HERE BE THE SCRIPTS -->
+<script src="App.js"></script>
 <script src="../Components/CodeSnippets.js"></script>
 <script src="../Components/StockPhotos.js"></script>
 <script src="../Components/YoutubeStreams.js"></script>
 <script src="../Components/GithubPages.js"></script>
 <script src="../Components/buttonInterface.js"></script>
+<script src="../Components/firebase_interface.js"></script>
 
 </body>
 </html>
