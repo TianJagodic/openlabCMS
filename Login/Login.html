@@ -2,9 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Login</title>
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../bootstrap-4.4.1-dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="../bootstrap-4.4.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../bootstrap-4.4.1-dist/css/bootstrap-reboot.css">
+
+    <link rel="stylesheet" href="../css/loginCSS.css">
+
 </head>
 <body>
+
+
+<div class="wrapper" id="formContent">
+    <div class="" style="width: 39%; display: inline-block" id="" desc="FormHolder">
+        <p class="textAboveLogin">Welcome to voting system</p>
+        <form id="LoginEmail-form">
+            <input type="text" id="login-name" class="loginInput" name="login" placeholder="EMAIL">
+            <input type="password" id="password" class="loginInput" name="login" placeholder="PASSWORD">
+            <div id="LoginEmailErrorText"></div>
+            <input type="submit" class="submitButton" value="LOGIN">
+        </form>
+    </div>
+
+
+    <div class="" style="width: 60%; display: inline-block" id="none" desc="ImageHolder">
+        <img class="imageSVG" src="">
+    </div>
+
+
+</div>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-functions.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-storage.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-analytics.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyDyrpR3t2p8QGnXw-VV0K3MyyHNG9lI1P4",
+        authDomain: "openlabwebpage.firebaseapp.com",
+        databaseURL: "https://openlabwebpage.firebaseio.com",
+        projectId: "openlabwebpage",
+        storageBucket: "openlabwebpage.appspot.com",
+        messagingSenderId: "678773091364",
+        appId: "1:678773091364:web:14a68e3e420b448ee73cb1",
+        measurementId: "G-WDXJM3ECCM"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+    const db = firebase.firestore();
+
+    var functions = firebase.functions();
+</script>
+
+
+<script src="Login.js"></script>
 
 </body>
 </html>

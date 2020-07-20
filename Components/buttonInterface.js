@@ -5,6 +5,9 @@ let stockPhotosButton = document.getElementById('sph');
 let codeSnippetsButton = document.getElementById('cs');
 
 
+let usersButton = document.getElementById('usr');
+
+
 
 //Set up the button clicks to load the specific
 youtubeStreamsButton.onclick = function () {
@@ -28,6 +31,10 @@ codeSnippetsButton.onclick = function () {
     //Load code snippets
 
 };
+
+usersButton.onclick = function(){
+
+}
 
 //MODALS -->
 //MODALS -->

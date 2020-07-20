@@ -9,6 +9,7 @@ async function LoadPhotos() {
 const addStockPhotoButton = document.createElement('div');
 addStockPhotoButton.className = "addContentButton MD_shadow";
 addStockPhotoButton.innerText = "ADD NEW STOCK PHOTO";
+
 addStockPhotoButton.onclick = () => {
     addStockPhotoModal.style.display = "block";
 }
@@ -37,4 +38,34 @@ function AssembleDivs(docs) {
         });
         resolve(divs);
     });
+}
+
+document.getElementById('SPsinglebutton').onclick = () =>{
+    uploadNewStockPhoto();
+}
+
+async function uploadNewStockPhoto() {
+
+
+    let SPname = document.getElementById('SPname').value;
+    let imgTag = document.getElementById('SPimg');
+    let SPauthor = document.getElementById('SPauthor').value;
+    let SPcameraSettings = document.getElementById('SPcameraSettings').value;
+    let SPposIndex = document.getElementById('SPposIndex').value;
+    let SPpicButton = document.getElementById('SPpicButton');
+
+    let img = await UploadStockPhoto(SPpicButton.files[0], SPname);
+
+    let data ={
+        author: SPauthor,
+        camera_settings: SPcameraSettings,
+        image_link: img,
+        image_name: SPname,
+        pos_index: SPposIndex,
+        timestamp: 100
+    }
+
+    db.collection('stock_photos').add(data);
+
+
 }
