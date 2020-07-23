@@ -44,6 +44,7 @@
             <li id="usr" class="selection">Users</li>
         </ul>
     </nav>
+
     <div div id="mainContaier" class="" style="margin-left: 220px">
         <div id="content">
 
@@ -54,6 +55,7 @@
     <!-- MODALS SECTION -->
     <!-- MODALS SECTION -->
     <!-- MODALS SECTION -->
+
 
     <!-- The ADD STOCK PHOTO Modal -->
     <div id="addStockPhotoModal" class="modal">
@@ -136,7 +138,7 @@
         <div class="modal-content">
             <span class="ESPMclose" style="width: 100%">Close</span>
 
-            <form id="newUserForm" class="form-horizontal" onsubmit="">
+            <form id="editSPform" class="form-horizontal" onsubmit="">
                 <fieldset>
 
                     <!-- Form Name -->
@@ -190,18 +192,30 @@
 
                     <!-- Button -->
                     <div class="form-group">
-                        <label class="col-md-4 control-label" for="SPsinglebutton"></label>
-                        <div class="col-md-4">
-                            <button type="button" id="editSPsinglebutton" name="singlebutton" class="btn btn-primary">Save</button>
+                        <div >
+                            <center>  <button type="button" id="deleteStockPhotoButton" name="singlebutton" class="btn btn-primary redColor">Delete</button>
+                            </center>
                         </div>
                     </div>
 
+                    <!-- Button -->
+                    <div class="form-group">
+                        <div style="display: inline-block">
+                            <button type="button" id="dontSaveSP" name="singlebutton" class="btn btn-primary">Exit without save</button>
+                        </div>
 
-                </fieldset>
+                        <div style="display: inline-block; float: right">
+                            <button type="button" id="editSPsinglebutton" name="singlebutton" class="btn btn-primary">Save</button>
+                        </div>
+
+                    </div>
+
+               </fieldset>
             </form>
         </div>
 
     </div>
+
 
 </div>
 

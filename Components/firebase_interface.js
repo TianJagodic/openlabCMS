@@ -45,3 +45,21 @@ async function UploadStockPhoto(image, name){
         });
     });
 }
+
+function DropStockPhoto(id) {
+    db.collection('stock_photos').doc(id).delete().then(function() {
+        console.log("Document successfully deleted!");
+    }).catch(function(error) {
+        console.error("Error removing document: ", error);
+    });
+}
+
+function UpdateStockPhoto(id, data) {
+    db.collection().doc(id).update(data).then(function() {
+        console.log("Document successfully updated!");
+    }).catch(function(error) {
+            // The document probably doesn't exist.
+            console.error("Error updating document: ", error);
+        });
+
+}

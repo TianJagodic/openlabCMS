@@ -44,8 +44,40 @@ function AssembleDivs(docs) {
                 document.getElementById('editSPcameraSettings').value = doc.data().camera_settings;
                 document.getElementById('editSPposIndex').value = doc.data().pos_index;
 
+                //Save new data
                 document.getElementById('editSPsinglebutton').onclick = () => {
                     //Save changes
+                    let data = {}
+
+                    if(document.getElementById('editSPimg').src === doc.data().image_link){
+                        data = {
+                            image_name: document.getElementById('editSPname').value,
+                            author: document.getElementById('editSPauthor').value,
+                            camera_settings: document.getElementById('editSPcameraSettings').value,
+                            pos_index: document.getElementById('editSPposIndex').value
+                        }
+                    }else{
+                        data = {
+                            image_link: UploadStockPhoto(document.getElementById('editSPimg').files[0],document.getElementById('editSPname').value),
+                            image_name: document.getElementById('editSPname').value,
+                            author: document.getElementById('editSPauthor').value,
+                            camera_settings: document.getElementById('editSPcameraSettings').value,
+                            pos_index: document.getElementById('editSPposIndex').value
+                        }
+                    }
+
+                    UpdateStockPhoto(doc.id, data);
+                    resetStockPhotoModals();
+
+                }
+
+                //Drop this image
+                document.getElementById('deleteStockPhotoButton').onclick = () =>{
+                    //Drop stock photo
+                    if(confirm("Are you sure you wnat to delete " + doc.data().image_name)){
+                        DropStockPhoto(doc.id);
+                        resetStockPhotoModals();
+                    }
                 }
 
                 editStockPhotoModal.style.display = "block";
@@ -86,6 +118,9 @@ async function uploadNewStockPhoto() {
     }
 
     db.collection('stock_photos').add(data);
+}
 
-
+function resetStockPhotoModals() {
+    document.getElementById('newStockPhotoForm').reset();
+    document.getElementById('editSPform').reset();
 }

@@ -59,6 +59,9 @@ let ESPMclose = document.getElementsByClassName("ESPMclose")[0];
 ESPMclose.onclick = function() {
     editStockPhotoModal.style.display = "none";
 }
+document.getElementById('dontSaveSP').onclick = () =>{
+    editStockPhotoModal.style.display = "none";
+}
 
 window.onclick = function(event) {
     if (event.target == editStockPhotoModal) {
