@@ -32,7 +32,7 @@
 
 <div id="page" class="wrapper" style="width: 98%">
     <nav id="sidebar" class="active">
-        <img class="logo" src="../img/OpenLab.png">
+        <a href="App.html"><img class="logo" src="../img/OpenLab.png"></a>
         <ul class="list-unstyled components mb-5">
             <li class="section">CMS SECTIONS</li>
             <li id="yts" class="selection">Youtube streams</li>
@@ -47,7 +47,7 @@
 
     <div div id="mainContaier" class="" style="margin-left: 220px">
         <div id="content">
-
+            <p style="cursor: default;margin: 20px;font-size: 1.5em; color: #797878"> Please select a CMS section</p>
         </div>
     </div>
 
@@ -217,6 +217,147 @@
     </div>
 
 
+    <!-- The ADD GITHUB REPO Modal -->
+    <div id="addGithubRepoModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="AGRMclose" style="width: 100%">Close</span>
+
+            <form id="newGithubRepoForm" class="form-horizontal" onsubmit="">
+                <fieldset>
+
+                    <!-- Form Name -->
+                    <legend>Edit github repo</legend>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="GRname">Name</label>
+                        <div class="col-md-4">
+                            <input id="GRname" name="name" type="text" placeholder="general name" class="form-control input-md" required="">
+
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="GRtoken">Token</label>
+                        <div class="col-md-4">
+                            <input id="GRtoken" name="token" type="text" placeholder="token" class="form-control input-md">
+
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="GRrepoName">Repo Name</label>
+                        <div class="col-md-4">
+                            <input id="GRrepoName" name="GRrepoName" type="text" placeholder="/openlab.github.io" class="form-control input-md">
+
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="GRposIndex">Position index</label>
+                        <div class="col-md-4">
+                            <input id="GRposIndex" name="cameraSettings" type="text" placeholder="1000" class="form-control input-md">
+
+                        </div>
+                    </div>
+
+                    <!-- Button -->
+                    <div class="form-group" style="padding: 0px 15px;">
+                        <div style="display: inline-block">
+                            <button type="button" id="dontSaveGR" name="singlebutton" class="btn btn-primary">Exit without save</button>
+                        </div>
+
+                        <div style="display: inline-block; float: right">
+                            <button type="button" id="GRsinglebutton" name="singlebutton" class="btn btn-primary">Save</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- The EDIT GITHUB REPO Modal -->
+    <div id="editGithubRepoModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="EGRMclose" style="width: 100%">Close</span>
+
+            <form id="editGithubRepoForm" class="form-horizontal" onsubmit="">
+                <fieldset>
+
+                    <!-- Form Name -->
+                    <legend>Edit github repo</legend>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="editGRname">Name</label>
+                        <div class="col-md-4">
+                            <input id="editGRname" name="name" type="text" placeholder="general name" class="form-control input-md" required="">
+
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="editGRtoken">Token</label>
+                        <div class="col-md-4">
+                            <input id="editGRtoken" name="token" type="text" placeholder="token" class="form-control input-md">
+
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="editGRrepoName">Repo Name</label>
+                        <div class="col-md-4">
+                            <input id="editGRrepoName" name="cameraSettings" type="text" placeholder="/openlab.github.io" class="form-control input-md">
+
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="editGRposIndex">Position index</label>
+                        <div class="col-md-4">
+                            <input id="editGRposIndex" name="cameraSettings" type="text" placeholder="1000" class="form-control input-md">
+
+                        </div>
+                    </div>
+
+                    <!-- Button -->
+                    <div class="form-group">
+                        <div >
+                            <center>  <button type="button" id="deleteGithubRepoButton" name="singlebutton" class="btn btn-primary redColor">Delete</button>
+                            </center>
+                        </div>
+                    </div>
+
+                    <!-- Button -->
+                    <div class="form-group">
+                        <div style="display: inline-block">
+                            <button type="button" id="dontSaveGRedit" name="editGRsinglebutton" class="btn btn-primary">Exit without save</button>
+                        </div>
+
+                        <div style="display: inline-block; float: right">
+                            <button type="button" id="editGRsinglebutton" name="singlebutton" class="btn btn-primary">Save</button>
+                        </div>
+
+                    </div>
+
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+
+
 </div>
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -259,7 +400,7 @@ s
 <script src="../Components/CodeSnippets.js"></script>
 <script src="../Components/StockPhotos.js"></script>
 <script src="../Components/YoutubeStreams.js"></script>
-<script src="../Components/GithubPages.js"></script>
+<script src="../Components/GithubRepos.js"></script>
 <script src="../Components/buttonInterface.js"></script>
 <script src="../Components/firebase_interface.js"></script>
 

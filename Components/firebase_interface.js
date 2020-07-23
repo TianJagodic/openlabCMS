@@ -10,9 +10,22 @@ function GetAllStockPhotos() {
     });
 }
 
+function GetAllGithubRepos() {
+    return new Promise(resolve => {
+        let repoDocs = [];
+        db.collection('github_internal_data').get().then(snapshot =>{
+            snapshot.forEach(doc =>{
+                repoDocs.push(doc);
+            });
+            resolve(repoDocs);
+        });
+    });
+}
+
 
 //Upload the picture of the user and return the download link
 async function UploadStockPhoto(image, name){
+
     //image name
     let imgName = name + "-" + Math.floor(Math.random() * 100000) + 1; + "-picture";
 
@@ -55,11 +68,29 @@ function DropStockPhoto(id) {
 }
 
 function UpdateStockPhoto(id, data) {
-    db.collection().doc(id).update(data).then(function() {
+    db.collection('stock_photos').doc(id).update(data).then(function() {
         console.log("Document successfully updated!");
     }).catch(function(error) {
-            // The document probably doesn't exist.
-            console.error("Error updating document: ", error);
-        });
+        // The document probably doesn't exist.
+        console.error("Error updating document: ", error);
+    });
+
+}
+
+function DropGithubRepo(id) {
+    db.collection('github_internal_data').doc(id).delete().then(function() {
+        console.log("Document successfully deleted!");
+    }).catch(function(error) {
+        console.error("Error removing document: ", error);
+    });
+}
+
+function UpdateGithubRepo(id, data) {
+    db.collection('github_internal_data').doc(id).update(data).then(function() {
+        console.log("Document successfully updated!");
+    }).catch(function(error) {
+        // The document probably doesn't exist.
+        console.error("Error updating document: ", error);
+    });
 
 }

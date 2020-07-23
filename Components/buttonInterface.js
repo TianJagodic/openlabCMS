@@ -18,6 +18,7 @@ youtubeStreamsButton.onclick = function () {
 githubReposButton.onclick = function () {
     ClearPage();
     //Github
+    LoadGithubRepos();
 };
 
 stockPhotosButton.onclick = function () {
@@ -63,12 +64,42 @@ document.getElementById('dontSaveSP').onclick = () =>{
     editStockPhotoModal.style.display = "none";
 }
 
+//ADD GITHUB REPO
+//ADD GITHUB REPO
+//ADD GITHUB REPO
+let addGithubRepoModal = document.getElementById('addGithubRepoModal');
+let AGRMclose = document.getElementsByClassName("AGRMclose")[0];
+// When the user clicks on <span> (x), close the modal
+AGRMclose.onclick = function() {
+    addGithubRepoModal.style.display = "none";
+}
+
+//ADD GITHUB REPO
+//ADD GITHUB REPO
+//ADD GITHUB REPO
+let editGithubRepoModal = document.getElementById('editGithubRepoModal');
+let EGRMclose = document.getElementsByClassName("EGRMclose")[0];
+// When the user clicks on <span> (x), close the modal
+EGRMclose.onclick = function() {
+    editGithubRepoModal.style.display = "none";
+}
+
 window.onclick = function(event) {
+    //Stock photos
+    if (event.target == editStockPhotoModal) {
+        editStockPhotoModal.style.display = "none";
+    }
     if (event.target == editStockPhotoModal) {
         editStockPhotoModal.style.display = "none";
     }
 
-    if (event.target == editStockPhotoModal) {
-        editStockPhotoModal.style.display = "none";
+    //Github
+    if(event.target == addGithubRepoModal){
+        addGithubRepoModal.style.display = "none";
     }
+    if(event.target == editGithubRepoModal){
+        editGithubRepoModal.style.display = "none";
+    }
+
+
 }

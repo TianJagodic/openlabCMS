@@ -381,7 +381,7 @@ nav{
 }
 
 /* The Close Button */
-.ASPMclose, .ESPMclose {
+.ASPMclose, .ESPMclose,.AGRMclose,.EGRMclose {
   color: #3c3c3c;
   float: left;
   font-size: 0.9em;
@@ -413,7 +413,6 @@ nav{
   max-width: 100% !important;
 }
 
-
 .col-md-4{
   max-width: 100% !important;
 }
@@ -423,6 +422,7 @@ nav{
 }
 
 .redColor{
+  border-width: 0px !important;
   background-color: #ff0033 !important;
 }
 

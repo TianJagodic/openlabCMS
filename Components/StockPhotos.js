@@ -1,6 +1,6 @@
 async function LoadPhotos() {
     let docs = await GetAllStockPhotos();
-    let divs = await AssembleDivs(docs);
+    let divs = await assembleDivs(docs);
     ClearPage();
     Content.appendChild(addStockPhotoButton);
     divs.forEach(div => {Content.appendChild(div)})
@@ -14,7 +14,7 @@ addStockPhotoButton.onclick = () => {
     addStockPhotoModal.style.display = "block";
 }
 
-function AssembleDivs(docs) {
+function assembleDivs(docs) {
     return new Promise(resolve => {
         let divs = [];
         docs.forEach(doc =>{
@@ -74,7 +74,7 @@ function AssembleDivs(docs) {
                 //Drop this image
                 document.getElementById('deleteStockPhotoButton').onclick = () =>{
                     //Drop stock photo
-                    if(confirm("Are you sure you wnat to delete " + doc.data().image_name)){
+                    if(confirm("Are you sure you want to delete " + doc.data().image_name)){
                         DropStockPhoto(doc.id);
                         resetStockPhotoModals();
                     }
@@ -117,7 +117,11 @@ async function uploadNewStockPhoto() {
         timestamp: 100
     }
 
-    db.collection('stock_photos').add(data);
+    db.collection('stock_photos').add(data).then(function () {
+        addStockPhotoModal.style.display = "none";
+        resetStockPhotoModals();
+        LoadPhotos();
+    });
 }
 
 function resetStockPhotoModals() {
