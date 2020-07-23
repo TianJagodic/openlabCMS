@@ -14,7 +14,6 @@ addStockPhotoButton.onclick = () => {
     addStockPhotoModal.style.display = "block";
 }
 
-
 function AssembleDivs(docs) {
     return new Promise(resolve => {
         let divs = [];
@@ -30,6 +29,27 @@ function AssembleDivs(docs) {
 
             image.src = doc.data().image_link;
             image.className = "stock_photos_image";
+
+            div.onclick = () =>{
+                //Do something
+                //Setup the modal
+                //Show the data
+
+                console.log(doc.data())
+
+                document.getElementById('editSPimg').src = doc.data().image_link;
+                document.getElementById('editimagePreviewText').innerText = "Change photo";
+                document.getElementById('editSPname').value = doc.data().image_name;
+                document.getElementById('editSPauthor').value = doc.data().author;
+                document.getElementById('editSPcameraSettings').value = doc.data().camera_settings;
+                document.getElementById('editSPposIndex').value = doc.data().pos_index;
+
+                document.getElementById('editSPsinglebutton').onclick = () => {
+                    //Save changes
+                }
+
+                editStockPhotoModal.style.display = "block";
+            }
 
             div.appendChild(image);
             div.appendChild(innerText);

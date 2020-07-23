@@ -62,7 +62,7 @@
         <div class="modal-content">
             <span class="ASPMclose" style="width: 100%">Close</span>
 
-            <form id="newUserForm" class="form-horizontal" onsubmit="">
+            <form id="newStockPhotoForm" class="form-horizontal" onsubmit="">
                 <fieldset>
 
                     <!-- Form Name -->
@@ -129,6 +129,79 @@
 
     </div>
 
+    <!-- The ADD STOCK PHOTO Modal -->
+    <div id="editStockPhotoModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="ESPMclose" style="width: 100%">Close</span>
+
+            <form id="newUserForm" class="form-horizontal" onsubmit="">
+                <fieldset>
+
+                    <!-- Form Name -->
+                    <legend>Edit stock photo</legend>
+
+                    <div class="col-md-5" style="height: 150px">
+                        <img class="stock_photos_image_edit" id="editSPimg" src="" width="auto" height="150px">
+                    </div>
+
+                    <div class="col-md-5 ">
+                        <input type="file" class="custom-file-input" id="editSPpicButton"
+                               aria-describedby="inputGroupFileAddon01">
+                        <label id="editimagePreviewText" class="custom-file-label" for="SPpicButton">Add photo</label>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="SPname">Name</label>
+                        <div class="col-md-4">
+                            <input id="editSPname" name="name" type="text" placeholder="name of photo" class="form-control input-md" required="">
+
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="SPauthor">Author</label>
+                        <div class="col-md-4">
+                            <input id="editSPauthor" name="author" type="text" placeholder="name of the author" class="form-control input-md">
+
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="SPcameraSettings">Camera Settings</label>
+                        <div class="col-md-4">
+                            <input id="editSPcameraSettings" name="cameraSettings" type="text" placeholder="settings of the camera" class="form-control input-md">
+
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="SPposIndex">Display pos index</label>
+                        <div class="col-md-4">
+                            <input id="editSPposIndex" name="posIndex" type="text" placeholder="100" class="form-control input-md">
+
+                        </div>
+                    </div>
+
+                    <!-- Button -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="SPsinglebutton"></label>
+                        <div class="col-md-4">
+                            <button type="button" id="editSPsinglebutton" name="singlebutton" class="btn btn-primary">Save</button>
+                        </div>
+                    </div>
+
+
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
 
 </div>
 
@@ -160,14 +233,13 @@
     const db = firebase.firestore();
 </script>
 
-
 <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
 </script>
 
 <script src="https://www.google-analytics.com/analytics.js" async></script>
-
+s
 <!-- HERE BE THE SCRIPTS -->
 <script src="App.js"></script>
 <script src="../Components/CodeSnippets.js"></script>

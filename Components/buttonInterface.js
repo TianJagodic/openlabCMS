@@ -40,7 +40,9 @@ usersButton.onclick = function(){
 //MODALS -->
 //MODALS -->
 
-
+//ADD STOCK PHOTO
+//ADD STOCK PHOTO
+//ADD STOCK PHOTO
 let addStockPhotoModal = document.getElementById('addStockPhotoModal');
 let ASPMclose = document.getElementsByClassName("ASPMclose")[0];
 // When the user clicks on <span> (x), close the modal
@@ -48,8 +50,22 @@ ASPMclose.onclick = function() {
     addStockPhotoModal.style.display = "none";
 }
 
+//EDIT STOCK PHOTO
+//EDIT STOCK PHOTO
+//EDIT STOCK PHOTO
+let editStockPhotoModal = document.getElementById('editStockPhotoModal');
+let ESPMclose = document.getElementsByClassName("ESPMclose")[0];
+// When the user clicks on <span> (x), close the modal
+ESPMclose.onclick = function() {
+    editStockPhotoModal.style.display = "none";
+}
+
 window.onclick = function(event) {
-    if (event.target == addStockPhotoModal) {
-        addStockPhotoModal.style.display = "none";
+    if (event.target == editStockPhotoModal) {
+        editStockPhotoModal.style.display = "none";
+    }
+
+    if (event.target == editStockPhotoModal) {
+        editStockPhotoModal.style.display = "none";
     }
 }

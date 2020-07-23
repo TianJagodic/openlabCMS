@@ -1,6 +1,3 @@
-
-
-
 let Content = document.getElementById('content');
 
 firebase.auth().onAuthStateChanged(async user => {
@@ -19,7 +16,6 @@ function ClearPage() {
         allElements.removeChild(allElements.firstChild);
     }
 }
-
 
 //Destroy all children
 function DestroyAllChildren(id) {
