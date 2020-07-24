@@ -277,7 +277,7 @@ nav{
 
 #sidebar {
   background: rgb(255, 255, 255);
-  border-radius: 0px 20px 20px 0px;
+  /*border-radius: 0px 20px 20px 0px;*/
   height: 100%;
   position: fixed;
   bottom: 0;
@@ -341,7 +341,7 @@ nav{
   height: 100px;
   width: auto;
   display: inline-block;
-  border-radius: 20px;
+  border-radius: 5px;
 }
 
 .stock_photos_div{
@@ -349,7 +349,7 @@ nav{
   width: 95%;
   padding: 10px;
   margin: 20px;
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: white;
   cursor: pointer;
 }
@@ -381,7 +381,7 @@ nav{
 }
 
 /* The Close Button */
-.ASPMclose, .ESPMclose,.AGRMclose,.EGRMclose {
+.ASPMclose, .ESPMclose,.AGRMclose,.EGRMclose,.ASMclose,.editSMclose {
   color: #3c3c3c;
   float: left;
   font-size: 0.9em;
@@ -405,7 +405,7 @@ nav{
   margin: 20px;
   text-align: center;
   font-size: 1.3em;
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: #ffffff;
 }
 

@@ -14,6 +14,11 @@ addStockPhotoButton.onclick = () => {
     addStockPhotoModal.style.display = "block";
 }
 
+document.getElementById('dontSaveSP_NEW').onclick = () =>{
+    addStockPhotoModal.style.display = "none";
+    resetStockPhotoModals();
+}
+
 function assembleDivs(docs) {
     return new Promise(resolve => {
         let divs = [];
@@ -35,7 +40,6 @@ function assembleDivs(docs) {
                 //Setup the modal
                 //Show the data
 
-                console.log(doc.data())
 
                 document.getElementById('editSPimg').src = doc.data().image_link;
                 document.getElementById('editimagePreviewText').innerText = "Change photo";

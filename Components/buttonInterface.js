@@ -3,6 +3,7 @@ let youtubeStreamsButton = document.getElementById('yts');
 let githubReposButton = document.getElementById('ghr');
 let stockPhotosButton = document.getElementById('sph');
 let codeSnippetsButton = document.getElementById('cs');
+let speakersButton = document.getElementById('sp');
 
 
 let usersButton = document.getElementById('usr');
@@ -13,6 +14,7 @@ let usersButton = document.getElementById('usr');
 youtubeStreamsButton.onclick = function () {
     ClearPage();
     //Load youtube link
+    LoadYoutubeStreams();
 };
 
 githubReposButton.onclick = function () {
@@ -34,6 +36,14 @@ codeSnippetsButton.onclick = function () {
 };
 
 usersButton.onclick = function(){
+    ClearPage();
+    //Load users
+
+}
+
+speakersButton.onclick = function(){
+    ClearPage();
+    //Load speakers page
 
 }
 
@@ -74,14 +84,40 @@ AGRMclose.onclick = function() {
     addGithubRepoModal.style.display = "none";
 }
 
-//ADD GITHUB REPO
-//ADD GITHUB REPO
-//ADD GITHUB REPO
+//EDIT GITHUB REPO
+//EDIT GITHUB REPO
+//EDIT GITHUB REPO
 let editGithubRepoModal = document.getElementById('editGithubRepoModal');
 let EGRMclose = document.getElementsByClassName("EGRMclose")[0];
 // When the user clicks on <span> (x), close the modal
 EGRMclose.onclick = function() {
     editGithubRepoModal.style.display = "none";
+}
+
+//ADD YOUTUBE STREAM
+//ADD YOUTUBE STREAM
+//ADD YOUTUBE STREAM
+let addStreamModal = document.getElementById('addStreamModal');
+let ASMclose = document.getElementsByClassName("ASMclose")[0];
+// When the user clicks on <span> (x), close the modal
+ASMclose.onclick = function() {
+    addStreamModal.style.display = "none";
+}
+document.getElementById('dontSaveS').onclick = () =>{
+    addStreamModal.style.display = "none";
+}
+
+//EDIT YOUTUBE STREAM
+//EDIT YOUTUBE STREAM
+//EDIT YOUTUBE STREAM
+let editStreamModal = document.getElementById('editStreamModal');
+let editSMclose = document.getElementsByClassName("editSMclose")[0];
+// When the user clicks on <span> (x), close the modal
+editSMclose.onclick = function() {
+    editStreamModal.style.display = "none";
+}
+document.getElementById('dontSaveSedit').onclick = () =>{
+    editStreamModal.style.display = "none";
 }
 
 window.onclick = function(event) {
@@ -99,6 +135,14 @@ window.onclick = function(event) {
     }
     if(event.target == editGithubRepoModal){
         editGithubRepoModal.style.display = "none";
+    }
+
+    //YT STREAM
+    if(event.target == addStreamModal){
+        addStreamModal.style.display = "none";
+    }
+    if(event.target == editStreamModal){
+        editStreamModal.style.display = "none";
     }
 
 

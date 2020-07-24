@@ -39,6 +39,7 @@
             <li id="sph" class="selection">Stock photos</li>
             <li id="ghr" class="selection">Github repos</li>
             <li id="cs" class="selection">Code snippets</li>
+            <li id="sp" class="selection">Speakers</li>
 
             <li class="section">ADMIN SECTIONS</li>
             <li id="usr" class="selection">Users</li>
@@ -116,12 +117,17 @@
                         </div>
                     </div>
 
+
                     <!-- Button -->
                     <div class="form-group">
-                        <label class="col-md-4 control-label" for="SPsinglebutton"></label>
-                        <div class="col-md-4">
+                        <div style="display: inline-block">
+                            <button type="button" id="dontSaveSP_NEW" name="singlebutton" class="btn btn-primary">Exit without save</button>
+                        </div>
+
+                        <div style="display: inline-block; float: right">
                             <button type="button" id="SPsinglebutton" name="singlebutton" class="btn btn-primary">Save</button>
                         </div>
+
                     </div>
 
 
@@ -358,6 +364,131 @@
     </div>
 
 
+    <!-- The ADD YOUTUBE STREAM Modal -->
+    <div id="addStreamModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="ASMclose" style="width: 100%">Close</span>
+
+            <form id="newStreamForm" class="form-horizontal" onsubmit="">
+                <fieldset>
+
+                    <!-- Form Name -->
+                    <legend>Add Youtube stream</legend>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="Sname">Name</label>
+                        <div class="col-md-4">
+                            <input id="Sname" name="name" type="text" placeholder="name" class="form-control input-md" required="">
+
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="SiFrame">iFrame</label>
+                        <div class="col-md-4">
+                            <input id="SiFrame" name="token" type="text" placeholder="iFrame link" class="form-control input-md">
+
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="S_pos_index">Position index</label>
+                        <div class="col-md-4">
+                            <input id="S_pos_index" value="1000" name="token" type="text" placeholder="1000" class="form-control input-md">
+
+                        </div>
+                    </div>
+
+
+                    <!-- Button -->
+                    <div class="form-group" style="padding: 0px 15px;">
+                        <div style="display: inline-block">
+                            <button type="button" id="dontSaveS" name="singlebutton" class="btn btn-primary">Exit without save</button>
+                        </div>
+
+                        <div style="display: inline-block; float: right">
+                            <button type="button" id="Ssinglebutton" name="singlebutton" class="btn btn-primary">Save</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- The EDIT YOUTUBE STREAM Modal -->
+    <div id="editStreamModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="editSMclose" style="width: 100%">Close</span>
+
+            <form id="editStreamForm" class="form-horizontal" onsubmit="">
+                <fieldset>
+
+                    <!-- Form Name -->
+                    <legend>Edit Youtube stream repo</legend>
+
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="editSname">Name</label>
+                        <div class="col-md-4">
+                            <input id="editSname" name="name" type="text" placeholder="name" class="form-control input-md" required="">
+
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="editSiFrame">iFrame</label>
+                        <div class="col-md-4">
+                            <input id="editSiFrame" name="token" type="text" placeholder="iFrame link" class="form-control input-md">
+
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="editS_pos_index">Position index</label>
+                        <div class="col-md-4">
+                            <input id="editS_pos_index" name="token" type="text" placeholder="1000" class="form-control input-md">
+
+                        </div>
+                    </div>
+
+                    <!-- Button -->
+                    <div class="form-group">
+                        <div >
+                            <center>  <button type="button" id="deleteStreamButton" name="singlebutton" class="btn btn-primary redColor">Delete</button>
+                            </center>
+                        </div>
+                    </div>
+
+                    <!-- Button -->
+                    <div class="form-group">
+                        <div style="display: inline-block">
+                            <button type="button" id="dontSaveSedit" name="editGRsinglebutton" class="btn btn-primary">Exit without save</button>
+                        </div>
+
+                        <div style="display: inline-block; float: right">
+                            <button type="button" id="editSsinglebutton" name="singlebutton" class="btn btn-primary">Save</button>
+                        </div>
+
+                    </div>
+
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+
+
 </div>
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -394,7 +525,7 @@
 </script>
 
 <script src="https://www.google-analytics.com/analytics.js" async></script>
-s
+
 <!-- HERE BE THE SCRIPTS -->
 <script src="App.js"></script>
 <script src="../Components/CodeSnippets.js"></script>
