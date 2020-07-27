@@ -23,3 +23,12 @@ exports.getAllYoutubeStreams = functions.region('europe-west2').https.onCall(asy
         docs: streams
     }
 });
+
+exports.getAllCodeSnippets = functions.region('europe-west2').https.onCall(async (data, context) => {
+
+    let gists = await db.collection('github_gists').orderBy('pos_index', 'desc').get();
+
+    return {
+        docs: gists
+    }
+});

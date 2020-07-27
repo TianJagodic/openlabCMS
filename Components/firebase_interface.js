@@ -34,6 +34,18 @@ function GetAllStreams() {
     });
 }
 
+function GetAllCodeSnippets() {
+    return new Promise(resolve => {
+        let snippetDocs = [];
+        db.collection('github_gists').get().then(snapshot =>{
+            snapshot.forEach(doc =>{
+                snippetDocs.push(doc);
+            });
+            resolve(snippetDocs);
+        });
+    });
+}
+
 
 //Upload the picture of the user and return the download link
 async function UploadStockPhoto(image, name){
@@ -116,6 +128,23 @@ function DropYTStreamRepo(id) {
 
 function UpdateYTStreamRepo(id, data) {
     db.collection('youtube_streams').doc(id).update(data).then(function() {
+        console.log("Document successfully updated!");
+    }).catch(function(error) {
+        // The document probably doesn't exist.
+        console.error("Error updating document: ", error);
+    });
+}
+
+function DropCodeSnippet(id) {
+    db.collection('github_gists').doc(id).delete().then(function() {
+        console.log("Document successfully deleted!");
+    }).catch(function(error) {
+        console.error("Error removing document: ", error);
+    });
+}
+
+function UpdateCodeSnippet(id, data) {
+    db.collection('github_gists').doc(id).update(data).then(function() {
         console.log("Document successfully updated!");
     }).catch(function(error) {
         // The document probably doesn't exist.

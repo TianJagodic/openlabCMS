@@ -32,6 +32,7 @@ stockPhotosButton.onclick = function () {
 codeSnippetsButton.onclick = function () {
     ClearPage();
     //Load code snippets
+    LoadCodeSnippets();
 
 };
 
@@ -120,6 +121,32 @@ document.getElementById('dontSaveSedit').onclick = () =>{
     editStreamModal.style.display = "none";
 }
 
+//ADD CODE SNIPPET
+//ADD CODE SNIPPET
+//ADD CODE SNIPPET
+let addCodeSnippetModal = document.getElementById('addCodeSnippetModal');
+let ACSMclose = document.getElementsByClassName("ACSMclose")[0];
+// When the user clicks on <span> (x), close the modal
+ACSMclose.onclick = function() {
+    addCodeSnippetModal.style.display = "none";
+}
+document.getElementById('dontSaveCS').onclick = () =>{
+    addCodeSnippetModal.style.display = "none";
+}
+
+//EDIT CODE SNIPPET
+//EDIT CODE SNIPPET
+//EDIT CODE SNIPPET
+let editCodeSnippetModal = document.getElementById('editCodeSnippetModal');
+let editCSMclose = document.getElementsByClassName("editCSMclose")[0];
+// When the user clicks on <span> (x), close the modal
+editCSMclose.onclick = function() {
+    editCodeSnippetModal.style.display = "none";
+}
+document.getElementById('dontSaveCSedit').onclick = () =>{
+    editCodeSnippetModal.style.display = "none";
+}
+
 window.onclick = function(event) {
     //Stock photos
     if (event.target == editStockPhotoModal) {
@@ -145,5 +172,11 @@ window.onclick = function(event) {
         editStreamModal.style.display = "none";
     }
 
-
+    // CODE SNIPPETS
+    if(event.target == addCodeSnippetModal){
+        addCodeSnippetModal.style.display = "none";
+    }
+    if(event.target == editCodeSnippetModal){
+        editCodeSnippetModal.style.display = "none";
+    }
 }

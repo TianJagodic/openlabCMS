@@ -432,7 +432,7 @@
                 <fieldset>
 
                     <!-- Form Name -->
-                    <legend>Edit Youtube stream repo</legend>
+                    <legend>Edit Youtube stream</legend>
 
 
                     <!-- Text input-->
@@ -478,6 +478,131 @@
 
                         <div style="display: inline-block; float: right">
                             <button type="button" id="editSsinglebutton" name="singlebutton" class="btn btn-primary">Save</button>
+                        </div>
+
+                    </div>
+
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+
+
+    <!-- The ADD CODE SNIPPET Modal -->
+    <div id="addCodeSnippetModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="ACSMclose" style="width: 100%">Close</span>
+
+            <form id="newCodeSnippetForm" class="form-horizontal" onsubmit="">
+                <fieldset>
+
+                    <!-- Form Name -->
+                    <legend>Add Code Snippet</legend>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="CSname">Name</label>
+                        <div class="col-md-4">
+                            <input id="CSname" name="name" type="text" placeholder="name" class="form-control input-md" required="">
+
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="CSlink">Link</label>
+                        <div class="col-md-4">
+                            <input id="CSlink" name="token" type="text" placeholder="link" class="form-control input-md">
+
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="CS_pos_index">Position index</label>
+                        <div class="col-md-4">
+                            <input id="CS_pos_index" value="1000" name="token" type="text" placeholder="1000" class="form-control input-md">
+
+                        </div>
+                    </div>
+
+
+                    <!-- Button -->
+                    <div class="form-group" style="padding: 0px 15px;">
+                        <div style="display: inline-block">
+                            <button type="button" id="dontSaveCS" name="singlebutton" class="btn btn-primary">Exit without save</button>
+                        </div>
+
+                        <div style="display: inline-block; float: right">
+                            <button type="button" id="CSsinglebutton" name="singlebutton" class="btn btn-primary">Save</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- The EDIT CODE SNIPPET Modal -->
+    <div id="editCodeSnippetModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="editCSMclose" style="width: 100%">Close</span>
+
+            <form id="editCodeSnippetForm" class="form-horizontal" onsubmit="">
+                <fieldset>
+
+                    <!-- Form Name -->
+                    <legend>Edit Code Snippet</legend>
+
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="editCSname">Name</label>
+                        <div class="col-md-4">
+                            <input id="editCSname" name="name" type="text" placeholder="name" class="form-control input-md" required="">
+
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="editCSlink">iFrame</label>
+                        <div class="col-md-4">
+                            <input id="editCSlink" name="token" type="text" placeholder="link" class="form-control input-md">
+
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="editCS_pos_index">Position index</label>
+                        <div class="col-md-4">
+                            <input id="editCS_pos_index" name="token" type="text" placeholder="1000" class="form-control input-md">
+
+                        </div>
+                    </div>
+
+                    <!-- Button -->
+                    <div class="form-group">
+                        <div >
+                            <center>  <button type="button" id="deleteCodeSnippetButton" name="singlebutton" class="btn btn-primary redColor">Delete</button>
+                            </center>
+                        </div>
+                    </div>
+
+                    <!-- Button -->
+                    <div class="form-group">
+                        <div style="display: inline-block">
+                            <button type="button" id="dontSaveCSedit" name="editGRsinglebutton" class="btn btn-primary">Exit without save</button>
+                        </div>
+
+                        <div style="display: inline-block; float: right">
+                            <button type="button" id="editCSsinglebutton" name="singlebutton" class="btn btn-primary">Save</button>
                         </div>
 
                     </div>

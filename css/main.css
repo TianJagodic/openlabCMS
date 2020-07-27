@@ -381,7 +381,7 @@ nav{
 }
 
 /* The Close Button */
-.ASPMclose, .ESPMclose,.AGRMclose,.EGRMclose,.ASMclose,.editSMclose {
+.ASPMclose, .ESPMclose,.AGRMclose,.EGRMclose,.ASMclose,.editSMclose,.editCSMclose,.ACSMclose {
   color: #3c3c3c;
   float: left;
   font-size: 0.9em;
