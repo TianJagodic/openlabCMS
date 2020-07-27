@@ -1,7 +1,7 @@
 firebase.auth().onAuthStateChanged(async user => {
     if (user) {
         console.log('user logged in: ', user);
-        window.location = "../App/App";
+        window.location = "../App/App.html";
     } else {
         console.log('user logged out');
     }

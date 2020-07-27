@@ -6,8 +6,16 @@ let codeSnippetsButton = document.getElementById('cs');
 let speakersButton = document.getElementById('sp');
 
 
+let logout = document.getElementById('logout');
 let usersButton = document.getElementById('usr');
 
+logout.onclick = () =>{
+    firebase.auth().signOut().then(function() {
+        // Sign-out successful.
+    }).catch(function(error) {
+        // An error happened.
+    });
+}
 
 
 //Set up the button clicks to load the specific
