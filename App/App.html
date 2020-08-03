@@ -615,6 +615,187 @@
     </div>
 
 
+    <!-- The ADD CODE SNIPPET Modal -->
+    <div id="addSpeakersModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="ASPEMclose" style="width: 100%">Close</span>
+
+            <form id="newSpeakersForm" class="form-horizontal" onsubmit="">
+                <fieldset>
+
+                    <!-- Form Name -->
+                    <legend>Add Speaker</legend>
+
+                    <div class="col-md-5" style="height: 150px">
+                        <img id="SPEimg" src="" width="auto" height="150px">
+                    </div>
+
+                    <div class="col-md-5 ">
+                        <input type="file" class="custom-file-input" id="SPEpicButton"
+                               aria-describedby="inputGroupFileAddon01">
+                        <label id="imagePreviewText_SPE" class="custom-file-label" for="SPEpicButton">Add photo</label>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="SPEnameOfDocument">Name of document</label>
+                        <div class="col-md-4">
+                            <input id="SPEnameOfDocument" name="name" type="text" placeholder="name of document" class="form-control input-md" required="">
+
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="SPEnameOfSpeaker">Name of speaker</label>
+                        <div class="col-md-4">
+                            <input id="SPEnameOfSpeaker" name="name" type="text" placeholder="name of speaker" class="form-control input-md" required="">
+
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="SPEdescription">Description</label>
+                        <div class="col-md-4">
+                            <textarea id="SPEdescription" name="name" type="text" placeholder="description" class="form-control input-md" required=""></textarea>
+
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="SPEtopic">Topic</label>
+                        <div class="col-md-4">
+                            <input id="SPEtopic" name="name" type="text" placeholder="topic of talk" class="form-control input-md" required="">
+
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="SPEposIndex">Position index</label>
+                        <div class="col-md-4">
+                            <input id="SPEposIndex" name="name" type="text" placeholder="1000" class="form-control input-md" required="">
+
+                        </div>
+                    </div>
+
+                    <!-- Button -->
+                    <div class="form-group" style="padding: 0px 15px;">
+                        <div style="display: inline-block">
+                            <button type="button" id="dontSaveSPE" name="singlebutton" class="btn btn-primary">Exit without save</button>
+                        </div>
+
+                        <div style="display: inline-block; float: right">
+                            <button type="button" id="SPEsinglebutton" name="singlebutton" class="btn btn-primary">Save</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- The EDIT CODE SNIPPET Modal -->
+    <div id="editCSpeakersModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="editSPEMclose" style="width: 100%">Close</span>
+
+            <form id="editSpeakerForm" class="form-horizontal" onsubmit="">
+                <fieldset>
+
+                    <!-- Form Name -->
+                    <legend>Edit Speaker</legend>
+
+
+                    <div class="col-md-5" style="height: 150px">
+                        <img id="SPEimgEDIT" src="" width="auto" height="150px">
+                    </div>
+
+                    <div class="col-md-5 ">
+                        <input type="file" class="custom-file-input" id="SPEpicButtonEDIT"
+                               aria-describedby="inputGroupFileAddon01">
+                        <label id="imagePreviewText_SPEEDIT" class="custom-file-label" for="SPEpicButton">Change photo</label>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="SPEnameOfDocumentEDIT">Name of document</label>
+                        <div class="col-md-4">
+                            <input id="SPEnameOfDocumentEDIT" name="name" type="text" placeholder="name of document" class="form-control input-md" required="">
+
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="SPEnameOfSpeakerEDIT">Name of speaker</label>
+                        <div class="col-md-4">
+                            <input id="SPEnameOfSpeakerEDIT" name="name" type="text" placeholder="name of speaker" class="form-control input-md" required="">
+
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="SPEdescriptionEDIT">Description</label>
+                        <div class="col-md-4">
+                            <textarea id="SPEdescriptionEDIT" name="name" type="text" placeholder="description" class="form-control input-md" required=""></textarea>
+
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="SPEtopicEDIT">Topic</label>
+                        <div class="col-md-4">
+                            <input id="SPEtopicEDIT" name="name" type="text" placeholder="topic of talk" class="form-control input-md" required="">
+
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="SPEposIndexEDIT">Position index</label>
+                        <div class="col-md-4">
+                            <input id="SPEposIndexEDIT" name="name" type="text" placeholder="1000" class="form-control input-md" required="">
+
+                        </div>
+                    </div>
+
+
+                    <!-- Button -->
+                    <div class="form-group">
+                        <div >
+                            <center>  <button type="button" id="deleteSpeakerButton" name="singlebutton" class="btn btn-primary redColor">Delete</button>
+                            </center>
+                        </div>
+                    </div>
+
+                    <!-- Button -->
+                    <div class="form-group">
+                        <div style="display: inline-block">
+                            <button type="button" id="dontSaveSPEedit" name="editGRsinglebutton" class="btn btn-primary">Exit without save</button>
+                        </div>
+
+                        <div style="display: inline-block; float: right">
+                            <button type="button" id="editSPEsinglebutton" name="singlebutton" class="btn btn-primary">Save</button>
+                        </div>
+
+                    </div>
+
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+
+
 </div>
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -656,6 +837,7 @@
 <script src="App.js"></script>
 <script src="../Components/CodeSnippets.js"></script>
 <script src="../Components/StockPhotos.js"></script>
+<script src="../Components/Speakers.js"></script>
 <script src="../Components/YoutubeStreams.js"></script>
 <script src="../Components/GithubRepos.js"></script>
 <script src="../Components/buttonInterface.js"></script>

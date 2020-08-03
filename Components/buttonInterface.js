@@ -53,7 +53,7 @@ usersButton.onclick = function(){
 speakersButton.onclick = function(){
     ClearPage();
     //Load speakers page
-
+    LoadSpeakers();
 }
 
 //MODALS -->
@@ -155,6 +155,32 @@ document.getElementById('dontSaveCSedit').onclick = () =>{
     editCodeSnippetModal.style.display = "none";
 }
 
+//ADD SPEAKER
+//ADD SPEAKER
+//ADD SPEAKER
+let addSpeakersModal = document.getElementById('addSpeakersModal');
+let ASPEMclose = document.getElementsByClassName("ASPEMclose")[0];
+// When the user clicks on <span> (x), close the modal
+ASPEMclose.onclick = function() {
+    addSpeakersModal.style.display = "none";
+}
+document.getElementById('dontSaveSPE').onclick = () =>{
+    addSpeakersModal.style.display = "none";
+}
+
+//EDIT SPEAKER
+//EDIT SPEAKER
+//EDIT SPEAKER
+let editCSpeakersModal = document.getElementById('editCSpeakersModal');
+let editSPEMclose = document.getElementsByClassName("editSPEMclose")[0];
+// When the user clicks on <span> (x), close the modal
+editSPEMclose.onclick = function() {
+    editCSpeakersModal.style.display = "none";
+}
+document.getElementById('dontSaveSPEedit').onclick = () =>{
+    editCSpeakersModal.style.display = "none";
+}
+
 window.onclick = function(event) {
     //Stock photos
     if (event.target == editStockPhotoModal) {
@@ -186,5 +212,13 @@ window.onclick = function(event) {
     }
     if(event.target == editCodeSnippetModal){
         editCodeSnippetModal.style.display = "none";
+    }
+
+    // SPEAKERS
+    if(event.target == addSpeakersModal){
+        addSpeakersModal.style.display = "none";
+    }
+    if(event.target == editCSpeakersModal){
+        editCSpeakersModal.style.display = "none";
     }
 }
